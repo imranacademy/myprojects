@@ -1,0 +1,9 @@
+.loader{
+    position: absolute;
+    width: auto;
+    top:30px;
+    right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+}

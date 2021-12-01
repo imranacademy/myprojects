@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.reCaptcha{
+    font-weight:bold;
+    color: gray;
+    text-align:center;
+    font-size: 30px; 
+    line-height: 84px;
+    opacity: 0.5;
+    letter-spacing: 10px;
+    white-space: nowrap;
+    font-family: Road Rage, cursive;
+    position: absolute;
+    margin-top: -89px;
+    padding-left: 50px;
+}

@@ -1,0 +1,42 @@
+<div id="AddAccount">
+    <div class="form-row">
+        <form #f="ngForm" (ngSubmit)="AddAccountSubmit(f)">
+        <div class="col-lg-7 col-md-7 col-sm-9 col-xs-12 textboxmargin mbtextboxspace">
+            <div class="form-item">
+                <p class="formLabel">Account Number-BBBBAAAAAAAAAA</p>
+                <input type="text" name="accountNumber" ngModel #accountNumber class="form-style" required="required" />
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-7 col-sm-9 col-xs-12 textboxmargin mbtextboxspace">
+            <button type="button" (click)="fetchTitle(accountNumber)" id="BAbtnfetch" class="fetchbutton">Fetch Title</button>
+            <!-- <input type="submit" id="BAbtnfetch" class="fetchbutton" value="Fetch Title" name=""> -->
+        </div>
+        <div id="BADetail" *ngIf="(fetchTitle$ | async) as data">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 detailimage" >
+                <img src="../assets/img/paymentprofile.png">
+                <label class="managedetails"><span>{{data.objTitle.title}}</span>
+                    <!-- <legend class="legendtable">Zong-Prepaid - 03333306512
+                    </legend> -->
+                </label>
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+                <!-- <input type="submit" id="btnproceed" class="redbutton paynow " value="Add Now" name=""> -->
+                <button id="btnproceed" class="redbutton paynow">Add Now</button>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textboxmargin  mbtextboxspace" *ngIf="show">
+                <div >
+                    <div  *ngIf="(insertAccount$ | async) as data" 
+                    [ngClass]="data.objLinkResp?.linked ? 'alert alert-success' : 'alert alert-danger'">
+                       
+                        {{data.objLinkResp?.description}}
+                    </div>
+                </div>
+            </div>
+            <!--    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="   ">
+                    <a href="#" id="btnproceed" class="paddingzero"><img class="paynow" src="../assets/img/paymentpaynow.png"></a>
+                </div> -->
+        </div>
+    </form>
+
+    </div>
+</div>

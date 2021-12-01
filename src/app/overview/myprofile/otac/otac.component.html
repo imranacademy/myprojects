@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row passcodeoverviewrows">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+            <div class="col-lg-3 col-lg-offset-4 col-md-12 col-sm-12 col-xs-12 " style="margin-bottom: 30px;">
+                <h3 class="passcodeheading">OTAC</h3>
+                <!-- <div class="passcode"></div> -->
+            </div>
+    
+            <div class="passcodeform" style="margin-top: 20px;">
+                <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-6 col-xs-12 ">
+                    <img class="passcodeemail" src="assets/icons/icon3/7.png"> First 4 digits received on your email <br>
+                    <label class="padding111">e.g: abcd</label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <img class="passcodemobile" src="assets/icons/icon3/8.png"> Last 4 digits received on your mobile <br>
+                    <label class="padding111">e.g: xxyz</label>
+                </div>
+                
+
+                <div class="passcodeline displaynone  nosee"></div>
+                <form #f="ngForm" (ngSubmit)="submit(f)">
+                <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-6 col-xs-12  margintop24">
+                    <div class="form-item">
+                        <p class="formLabel">Email Passcode</p>
+                        <input type="text" ngModel name="otacemail" maxlength="4" minlength="4" class="form-style" required="required" />
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 margintop24">
+                    <div class="form-item">
+                        <p class="formLabel">SMS Passcode</p>
+                        <input type="text" ngModel name="otacsms" maxlength="4" minlength="4" class="form-style" required="required" />
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                   
+                </div>
+
+                <div class="col-lg-12  col-md-12  col-sm-4 col-sm-offset-2 col-xs-12 ">
+                    <label class="Transactionlimits">
+                        OTAC will expire in 72 hours
+                    </label>
+                </div>                     
+                    
+
+                <div class="col-lg-6 col-lg-offset-2 col-md-6 col-md-offset-1 col-sm-10 col-sm-offset-2 col-xs-12 ">
+                    <!-- <input class="redbutton pay buttonmargin" type="submit" id="btncontinue" value="Continue" name=""> -->
+                    <button class="redbutton pay buttonmargin"  id="btncontinue" >Continue</button>
+                </div>
+
+               
+            </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,1181 @@
+@media only screen and (max-width : 1500px) {
+    .shopnow {
+        margin-left: 264px;
+
+    }
+
+    .anchorright {
+        padding: 19px 0 0 526px;
+    }
+
+    .loginanchorright {
+        padding: 19px 0 0 101px;
+    }
+
+    .largenone {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 1280px) {
+    .anchorright {
+        padding: 19px 0 0 193px;
+        margin-left: 288px;
+
+    }
+
+    .largenone {
+        display: none;
+    }
+
+
+    .shopnow {
+
+        margin-left: 245px;
+
+    }
+
+    .banner4 {
+
+        width: 102%;
+
+    }
+
+    .Welcome {
+
+        width: 50%;
+    }
+
+
+    .nextarrowbutton {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 230px;
+        left: 1160px;
+        cursor: pointer;
+    }
+
+    .prevarrowbuttons {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 230px;
+        left: -6px;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width : 1024px) {
+    .right30 {
+        position: absolute;
+        right: 30px;
+    }
+
+    .mainWrap {
+        width: auto;
+        padding: 50px 20px;
+    }
+
+    .menu1 {
+        display: none;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
+
+    nav {
+        margin: 0;
+        background: none;
+    }
+
+    .menu1 li {
+        display: block;
+        margin: 0;
+    }
+
+    .menu1 li a {
+        background: #fff;
+        color: #797979;
+    }
+
+    .menu1 li a:hover,
+    .menu1 li:hover>a {
+        background: #9ca3da;
+        color: #fff;
+    }
+
+    .menu1 ul {
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: initial;
+    }
+
+    .menu1 li:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        transform: initial;
+    }
+
+    .menu1 ul ul {
+        left: 0;
+        transform: initial;
+    }
+
+    .menu1 li>ul ul:hover {
+        transform: initial;
+    }
+
+    .anchorright {
+        padding: 19px 0 0 81px;
+        margin-left: 206px;
+    }
+
+    .whitebackground {
+        height: 290px;
+    }
+
+    .statementbuttons {
+        margin-left: -139px;
+
+    }
+
+    .topupimage {
+        margin: 54px 0 0 127px;
+    }
+
+    .topupbutton {
+        height: 71px;
+        width: 220px;
+    }
+
+    .size {
+        font-size: 13px;
+    }
+
+    .navtext {
+        position: absolute;
+        top: 80px;
+        left: -1px;
+    }
+
+    .more {
+        padding: 45px 0 21px 0px;
+    }
+
+    .mobiletopup {
+        padding: 0 0 0 1px;
+    }
+
+    .verticalline {
+        margin-top: -51px;
+        margin-left: 363px;
+        height: 50px;
+    }
+
+    .alfaweblogo {
+        height: 33px;
+        width: 105px;
+        margin-top: -65px;
+        margin-left: 364px;
+    }
+
+    .loginanchorright {
+        padding: 19px 0 0 0px;
+    }
+
+    .mobileaddpadding {
+        padding-left: 55px;
+    }
+
+    .bgImage {
+        height: 135px;
+    }
+
+    .orbit-6 {
+        padding: 15px 0 0 144px;
+    }
+
+    .refreshicon {
+        margin: 0px 0 0 116px;
+    }
+
+    .limitcategory {
+        left: 23px;
+    }
+
+    .availablelimit {
+        left: 641px;
+        padding: 24px 30px 0 38px;
+
+    }
+
+    .totallimit {
+        left: 790px;
+        padding: 32px 30px 0 38px;
+    }
+
+    .AWbuttons {
+        margin-left: 11px;
+        padding: 5px 17px 5px 17px;
+    }
+
+    .WSbuttons {
+        margin-left: 11px;
+        padding: 5px 23px 5px 23px;
+    }
+
+    .buyticket {
+        padding: 0 0 0 5px;
+    }
+
+    .alfamall {
+        width: 130px;
+    }
+
+    .nextarrowbutton {
+        left: 950px;
+    }
+
+    .featurenextarrow {
+        left: 944px;
+    }
+
+    .banner5 {
+        height: 333px;
+        width: 512px;
+    }
+
+    .shopnow {
+        top: 255px;
+        margin-left: 189px
+    }
+
+    .largenone {
+        display: none;
+    }
+
+    .banner4 {
+        width: 517px;
+        height: 331px;
+    }
+
+    .sliderimageleft {
+        border-radius: 10px;
+        height: 292px;
+        width: 56.75%;
+    }
+
+    .sliderimageright {
+        width: 63.85%;
+        height: 292px;
+        border-radius: 10px;
+    }
+
+    .images {
+        padding: 0px 0 0 45px;
+        height: 67px;
+    }
+
+
+
+    .backgroundGray {
+        background-color: #edeef0;
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: 0 8px 10px -6px #d7d5d5;
+    }
+
+    .grayrow {
+        background-color: #edeef0;
+        color: white;
+        padding: 5px 0 5px 0;
+        width: 101.4%;
+    }
+
+    .banner2 {
+        height: 348px;
+    }
+
+    .boxwhite {
+        width: 215px !important;
+        background: #fff;
+        margin: 20px 0;
+        padding: 25px 15px;
+        overflow: hidden;
+        border-radius: 0.25rem;
+        height: 205px;
+    }
+
+    .featureredheading {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .sliderline {
+        border: 1px solid #eaeaea;
+        width: 80px;
+        margin-left: 52px;
+        margin-bottom: 2px;
+    }
+
+    .overview {
+        padding: 0 0 0 0;
+    }
+
+    .transfer {
+        padding: 0 0 0 4px;
+    }
+
+    .orbit {
+        padding: 0 0 0 17px;
+    }
+
+    .donation {
+        padding: 0 0 0 28px;
+    }
+
+    .RedIcons {
+        padding: 40px 0 10px 9px;
+        height: 80px;
+    }
+
+    .SliderP {
+        text-align: center;
+        font-size: 13px;
+        color: #777777;
+    }
+
+    .SliderP {
+        text-align: center;
+        font-size: 13px;
+        color: #777777;
+    }
+
+    .SliderP {
+        text-align: center;
+        font-size: 13px;
+        color: #777777;
+    }
+
+    .addpadding {
+        padding-left: 171px;
+    }
+
+    .logo {
+        height: 70px;
+        width: 80px;
+        text-align: center;
+    }
+
+    .appcontent {
+
+        margin: 51px 47px 0 0;
+        float: right;
+    }
+
+    .headerpadding {
+        padding-left: 23px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .appbanner {
+
+        height: 276px;
+        position: relative;
+        background-size: cover;
+    }
+
+    .appcontent {
+        margin: 37px 3px 0 0;
+        float: right;
+    }
+
+    .appcontent h1 {
+        font-size: 30px;
+    }
+
+    .appcontent p {
+        font-size: 15px;
+    }
+
+    .mainWrap {
+        width: 768px;
+    }
+
+    .menu1 ul {
+        top: 37px;
+    }
+
+    .menu1 li a {
+        font-size: 12px;
+    }
+
+    a.homer {
+        background: #374147;
+    }
+
+    .mobileaddpadding {
+        padding-left: 0px;
+        font-size: 11px;
+    }
+
+    .header-fixed a {
+        padding: 0 4px 0 3px;
+    }
+
+    .topupbutton {
+        height: 64px;
+        width: 163px;
+    }
+
+    .activehover {
+        background-size: 112px 118px;
+    }
+
+    .topupimage {
+        height: 190px;
+        margin: 66px 0 0 101px;
+    }
+
+    .radiobuttonposition {
+        left: 13px;
+    }
+
+    .shopnow {
+        font-size: 13px;
+        margin-left: 138px;
+        padding: 3px 20px 3px 20px;
+        top: 171px;
+    }
+
+    .loginmenu {
+
+        height: 23px;
+    }
+
+    .verticalline {
+        margin-left: 301px;
+    }
+
+    .addpadding {
+        padding-left: 86px;
+    }
+
+    .mobileaddpadding {
+        padding-left: 0px;
+    }
+
+    .anchorright {
+        padding: 19px 0 0 80px;
+        margin-left: 80px;
+    }
+
+    .orbit-6 {
+        padding: 15px 0 0 90px;
+        height: 49px;
+        margin-top: 11px;
+    }
+
+    .refreshicon {
+        margin: -4px 0 0 54px;
+        height: 58px;
+    }
+
+    .availablelimit {
+        left: 492px;
+        height: 102px;
+        font-size: 10px;
+        padding: 22px 20px 0 35px;
+        top: 15px;
+    }
+
+    .totallimit {
+        left: 606px;
+        height: 102px;
+        font-size: 10px;
+        padding: 26px 20px 0 35px;
+        top: 15px;
+    }
+
+    .nextarrowbutton {
+        left: 717px;
+    }
+
+    .alfaweblogo {
+        height: 30px;
+        width: 96px;
+        margin-top: -62px;
+        margin-left: 302px;
+    }
+
+    .loginanchorright {
+        padding: 19px 0 0 9px;
+    }
+
+    .bgImage {
+        height: 120px;
+        width: 102%;
+    }
+
+    .RedIcons {
+        padding: 28px 0 10px 0px;
+        height: 70px;
+    }
+
+    .size {
+        font-size: 12px;
+    }
+
+    .overview {
+        margin: 0 0 0 -21px;
+    }
+
+    .transfer {
+        padding: 0 0 0 0px;
+    }
+
+    .utility {
+        padding: 0 0 0 0px;
+    }
+
+    .donation {
+        padding: 0 0 0 6px;
+    }
+
+    .tax {
+        padding: 0 0 0 7px;
+    }
+
+    .orbit {
+        padding: 0 0 0 8px;
+    }
+
+    .limitcategory {
+        left: -25px;
+        margin: 11px 0 0 0;
+        font-size: 12px;
+    }
+
+    .customerdetail {
+        margin: 3px 0 0 0;
+    }
+
+    .statementbuttons {
+        margin-left: -109px;
+        font-size: 13px;
+        padding: 5px 25px 5px 25px;
+    }
+
+    .AWbuttons {
+        font-size: 13px;
+        margin-left: 21px;
+    }
+
+    .WSbuttons {
+        font-size: 13px;
+        margin-left: 21px;
+    }
+
+    .customer-name {
+        font-size: 12px;
+    }
+
+    .date-time,
+    .limit-change {
+        font-size: 9px;
+    }
+
+    .avatar-upload .avatar-preview {
+        width: 50px;
+        height: 50px;
+    }
+
+    .profileimage {
+        height: 39px;
+        width: 38px;
+    }
+
+    .breadcrumbaccount {
+        height: 18px;
+        padding: 0 0 0 0;
+    }
+
+    .setchangepassword {
+        font-size: 12px;
+    }
+
+    .overviewdetails {
+        color: #000;
+        font-size: 13px;
+    }
+
+    .overviewbalance {
+        padding: 0 0 0 0px;
+    }
+
+    .boxwhite {
+        width: 160px !important;
+        padding: 11px 0px;
+        height: 188px;
+    }
+
+    .line {
+        top: 185px;
+        width: 176px;
+    }
+
+    mark {
+        padding: 8px 5px 8px 5px;
+    }
+
+    .whitebackground {
+        height: 200px;
+    }
+
+    .sliderimageright {
+        width: 49%;
+        height: 245px;
+    }
+
+    .sliderimageleft {
+        height: 245px;
+        width: 43.5%;
+    }
+
+    .banner2 {
+        height: 297px;
+    }
+
+    .featureheading {
+        font-size: 18px;
+
+    }
+
+    .topupline {
+        width: 110px;
+
+    }
+
+    .featureline {
+        width: 186px;
+    }
+
+    .featureredheading {
+        font-size: 15px;
+    }
+
+    .sliderline {
+        width: 60px;
+        margin-left: 50px;
+    }
+
+    .SliderP {
+        font-size: 12px;
+    }
+
+    .school {
+        padding: 0px 0 0 35px;
+        height: 63px;
+    }
+
+    .images {
+        padding: 0px 0 0 35px;
+        height: 67px;
+    }
+
+    .alfamall {
+        height: 48px;
+    }
+
+    .logo {
+        height: 57px;
+    }
+
+    .grayrow {
+        padding: 5px 0 2px 0 width: 100%;
+    }
+
+    .right30 {
+        position: absolute;
+        right: 30px;
+
+    }
+
+    .header-fixed {
+        height: 90px;
+    }
+
+    .navtext {
+        top: 70px;
+        left: 13px;
+    }
+
+    .more {
+        padding: 36px 0 21px 1px;
+    }
+
+    .activehoverother {
+        background-size: 113px 120px;
+    }
+
+    .feespayment {
+        padding: 0 0 0 8px;
+    }
+
+    .buyticket {
+        padding: 0 0 0 8px;
+    }
+
+    .headerpadding {
+        padding-left: 0;
+    }
+
+
+    .featurenextarrow {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 110px;
+        left: 712px;
+        cursor: pointer;
+    }
+
+
+
+    .banner4 {
+        width: 386px;
+        height: 260px;
+    }
+
+    .banner5 {
+        height: 260px;
+        width: 384px;
+    }
+
+
+
+    .featureprevarrow {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 110px;
+        left: -13px;
+        cursor: pointer;
+    }
+
+    .largenone {
+        display: none;
+    }
+
+
+    .alfamallslider {
+        width: 170px;
+
+
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .borderside {
+        width: 358px;
+    }
+
+    .successfulimage {
+        height: 60px;
+
+    }
+
+    .featureheading {
+        font-size: 15px;
+        /* padding: 0 0 0 21px; */
+    }
+
+    .successfulheading {
+        margin-left: 119px !important;
+        width: 80px !important;
+    }
+
+    .popupmessage {
+        padding: 5px 38px 5px 40px;
+    }
+
+    .popupborder {
+        width: 354px;
+        border: 1px solid #d9291c;
+        border-radius: 7px;
+    }
+
+    /*textbox */
+    .mbtextboxspace {
+        margin: 15px 0 7px 0 !important;
+    }
+
+    /*end textbox */
+    /*button*/
+    .pay {
+        width: 101%;
+        height: 41px;
+    }
+
+    /*button end*/
+    .mobiletopupdiv {
+        box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+        position: relative;
+        margin-top: 5px;
+    }
+
+    .Welcome {
+        width: 100%;
+    }
+
+    .bgImage {
+        height: 255px;
+        width: 100%;
+
+    }
+
+    .customer-name {
+        font-size: 11px;
+    }
+
+    .limitcategory {
+        left: -68px;
+        /* margin: 11px 0 0 0;*/
+        font-size: 11px;
+    }
+
+    .orbit-6 {
+        padding: 15px 0 0 0px;
+        height: 40px;
+        /*    margin-top: 11px;*/
+    }
+
+    .refreshicon {
+        margin: -4px 0 0 -48px;
+        height: 53px;
+    }
+
+    .availablelimit {
+        left: 229px;
+        height: 102px;
+        font-size: 10px;
+        padding: 22px 20px 0 35px;
+        top: 15px;
+    }
+
+    .totallimit {
+        left: 251px;
+        height: 102px;
+        font-size: 10px;
+        padding: 26px 20px 0 35px;
+        top: 15px;
+    }
+
+    .WSbuttons {
+        font-size: 13px;
+        margin-left: -52px;
+    }
+
+    .AWbuttons {
+        font-size: 13px;
+        margin-left: -31px;
+    }
+
+    .bgformobile {
+        background-image: url(../assets/img/bg.png);
+        height: 317px;
+        width: 101%;
+        position: relative;
+        background-size: cover;
+
+    }
+
+    .mobilewhitebackground {
+
+        height: 307px;
+    }
+
+    .textboxmargin {
+        margin: 7px 0 7px 0;
+    }
+
+    .topupbutton {
+        width: 274px;
+    }
+
+
+
+    .mobilemenu {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .mobileline {
+        width: 249px;
+        border: 0;
+        border-top: 1px solid #e5e5e5;
+        margin-left: 23px;
+    }
+
+    .RedIcons {
+        padding: 5px 1px 3px 6px;
+        height: 38px;
+    }
+
+    .navtext {
+        top: 38px;
+        left: 12px;
+    }
+
+    .largenone {
+        display: block;
+    }
+
+    .displaynone {
+        display: none;
+    }
+
+    .alfaweblogo {
+        margin-top: -8px;
+        margin-left: -32px;
+        height: 26px;
+        width: 67px
+    }
+
+    .mobileaddpadding {
+        font-size: 12px;
+    }
+
+    .loginanchorright {
+        padding: 0px 0 0 0px;
+    }
+
+    .logo {
+        height: 30px;
+        width: 43px;
+    }
+
+    .header-fixed a {
+        padding: 0 0px 0 0px;
+    }
+
+    a {
+        padding: 0 0px 0 0px;
+    }
+
+    .smallfontsize {
+        font-size: 11px;
+    }
+
+    .buyticket {
+        padding: 0 0 0 0px;
+    }
+
+    .overview {
+        margin: 0 0 0 0px;
+    }
+
+    .mobilebackground {
+        background-color: white;
+        border-radius: 10px;
+        height: 240px;
+    }
+
+    .sliderimageleft {
+        height: 245px;
+        width: 43%;
+    }
+
+    .sliderimageright {
+        width: 48.9%;
+        height: 245px;
+    }
+
+    .firstsliderleft {
+        padding: 0 0 0 0;
+        left: 5px;
+        margin: 0 0 54px 0;
+    }
+
+    .firstsliderright {
+        left: 5px;
+    }
+
+    .banner2 {
+        height: 553px;
+        width: 103%;
+
+    }
+
+    .chat {
+        width: 147px;
+        margin: 0 -29px 0 0px;
+    }
+
+    .whitebackground {
+        height: 241px;
+        width: 357px;
+
+    }
+
+    .banner4 {
+        width: 201px;
+        height: 132px;
+    }
+
+    .banner5 {
+        height: 132px;
+        width: 188px;
+    }
+
+    .shopnow {
+        font-size: 6px;
+        margin-left: 70px;
+        padding: 2px 10px 2px 10px;
+        top: 90px;
+
+    }
+
+    .tax {
+        padding: 0 0 0 0px;
+    }
+
+    .feespayment {
+        padding: 0 0 0 0;
+    }
+
+    .mobilemenuline {
+
+
+        /* margin: 15px 6px 0 1px; */
+        height: 43px;
+        border: 0;
+        border-right: 1px solid #e5e5e5;
+        /* position: absolute; */
+        top: 13px;
+        /* left: 104px; */
+        right: 13px;
+    }
+
+    .slidermargin1 {
+        margin-top: 27px;
+    }
+
+    .slidermargin2 {
+        margin-top: -37px;
+    }
+
+    .grayrow {
+        width: 103%;
+    }
+
+    .welcomesize {
+
+        font-size: 12px;
+        margin: 6px;
+    }
+
+    .size {
+        font-size: 11px;
+    }
+
+    .appbanner {
+        width: 100%;
+        height: 177px;
+        background-size: cover;
+        position: relative;
+    }
+
+    .appcontent h1 {
+        font-size: 23px;
+        color: #878787;
+        font-weight: bold;
+    }
+
+    .appcontent p {
+        font-size: 13px;
+        /*   color: #878787;*/
+    }
+
+    .appcontent {
+
+        margin: 16px 7px 0 20px;
+        float: right;
+    }
+
+    .appcontent img {
+        width: 69px !important;
+    }
+
+    .header-fixed {
+        height: 70px;
+    }
+
+    .utility {
+        padding: 0 0 0 9px;
+    }
+
+    .mobile-container {
+        max-width: 480px;
+        margin: auto;
+        /* background-color: #555;*/
+        /*  height: 500px;*/
+        color: white;
+        border-radius: 10px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        margin: 8px 0 10px 0;
+        position: relative;
+    }
+
+
+
+    .topnav a {
+        /* float: left;*/
+        color: black;
+        margin: 5px 0 10px 0px;
+        /*  padding: 14px 16px;
+  text-decoration: none;*/
+        /*  font-size: 17px;*/
+    }
+
+    .topnav a.icon {
+        float: right;
+    }
+
+    .loginmenu {
+        height: 14px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .fa-bars {
+        color: black;
+    }
+
+    .mobilealfaweb {
+        height: 35px;
+        width: 70px;
+    }
+
+    .addpadding {
+        padding: 0 0 0 37px;
+    }
+
+    .loginoption {
+        margin: 11px 0 0 0px;
+    }
+}

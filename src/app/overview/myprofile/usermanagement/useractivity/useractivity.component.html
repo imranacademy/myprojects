@@ -1,0 +1,45 @@
+<form #form="ngForm" (ngSubmit)="submit(form)">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <div class="form-item">
+            <p class="formLabel">From</p>
+            <input type="date" name="fromDate" ngModel class="form-style" id="date-1" required="required"  />
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <div class="form-item">
+            <p class="formLabel">To</p>
+            <input type="date" name="toDate" ngModel class="form-style" id="date-2" required="required"  />
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-16 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <input type="submit" id="btnlogin" class="redbutton paynow " value="Generate" name="">
+    </div>
+    {{form.value | json}}
+    </form>
+    <div id="logintable" *ngIf="loginActivity$ | async as data">
+        <div class="container mbpadding">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 accounts">
+                <div class="table-responsive">
+                    <table class="generaltable ">
+                        <thead>
+                            <tr>
+                                <td>Description</td>
+                                <td>Reference Number</td>
+                                <td class="floatright">Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of data"> 
+                                <td>{{item.logText}}</td>
+                                <td>{{item.referenceNo}}</td>
+                                <td>{{item.status}}</td>
+                            </tr>
+             
+                        </tbody>
+                    </table>
+                </div>
+                <input type="submit" id="" class="redbutton next floatright" value="Next" name="">
+            </div>
+        </div>
+    </div>
+    

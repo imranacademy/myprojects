@@ -1,0 +1,43 @@
+<div id="removeaccount">
+    <form #removeForm="ngForm" (ngSubmit)="removeAccount(removeForm)">
+    <!--  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <div class="form-item">
+            <p class="formLabel">Account Number</p>
+            <select name="removeaccount" ngModel class="form-style" (change)="onChange($event.target)">
+                <option></option>
+                <option [value]="accountlist.accountNumber" *ngFor="let accountlist of allAcount">{{accountlist.accountNumber}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 detailimage">
+        <div *ngIf="(accountTitle$ | async) as data">
+            <div *ngIf="data.response; else noData">
+                <img src="../assets/img/paymentprofile.png">
+                <label class="managedetails"><span>{{data.title}} </span>
+                </label>
+            </div>
+             <ng-template #noData>
+                <img src="../assets/img/paymentprofile.png">
+                <label class="managedetails"><span>No Record Found </span>
+                </label>
+             </ng-template>
+        </div>
+
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <!-- <input type="submit" id="btnproceed" class="redbutton paynow " value="Remove" name=""> -->
+        <button id="btnproceed" class="redbutton paynow">Remove</button>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textboxmargin  mbtextboxspace">
+        <div >
+            <div  *ngIf="(removeA$ | async) as data" 
+            [ngClass]="data.responseCode === '00' ? 'alert alert-success' : 'alert alert-danger'">
+               
+                {{data.responseDescription}}
+            </div>
+        </div>
+    </div>
+</form>
+</div>

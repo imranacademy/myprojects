@@ -1,0 +1,61 @@
+<form #form="ngForm" (ngSubmit)="submit(form)">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <div class="form-item">
+            <p class="formLabel"></p>
+            <input type="text" name="loginName"  [(ngModel)]="userDetails.loginName" class="form-style" value="BBBBAAAAAAAAAA" required="required" />
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <div class="form-item">
+            <p class="formLabel"></p>
+            <input type="text" name="mobile"  [(ngModel)]="userDetails.mobileNo" class="form-style" value="03XX-XXXXXXX" required="required" />
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <div class="form-item">
+            <p class="formLabel"></p>
+            <select name="mnp" class="form-style" [(ngModel)]="userDetails.mnp">
+                <option value="">Select postpaid/prepaid</option>
+                <option value="Telenor">Telenor</option>
+                <option value="Ufone">Ufone</option>
+                <option value="Jazz">Jazz</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <div class="form-item">
+            <p class="formLabel"></p>
+            <input type="email" name="email" [(ngModel)]="userDetails.email" class="form-style"  required="required" />
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textboxmargin">
+        <div class="form-item">
+            <p class="formLabel">Security Question</p>
+            <select name="securityQ" class="form-styleblack" [(ngModel)]="userDetails.securityQ">
+                <option value="">Select Security Question</option>
+                <option value="Option1">What was your childhood nickname?</option>
+                <option value="Option2">What is the name of your favorite childhood friend?</option>
+                <option value="Option2">What is the name of the company of your first job?</option>
+                <option value="Option2">What was your favorite place to visit as a child?</option>
+                <option value="Option3">What is your pet’s name?</option>
+                <option value="Option4">What is your favorite animal?</option>
+                <option value="Option5">What is your favorite movie?</option>
+                <option value="Option6">What is your favorite color?</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <div class="form-item">
+            <p class="formLabel"></p>
+            <input type="text" name="securityA" [(ngModel)]="userDetails.securityA" class="form-style" required="required" />
+        </div>
+    </div>
+    <br>
+    <div class="col-lg-6 col-md-16 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+        <input type="submit" id="paybillbutton" class="redbutton paynow " value="Confirm" name="">
+    </div>
+</form>
+<div class="alert alert-success" *ngIf="response$ |  async as res">
+    {{res}}
+</div>
+

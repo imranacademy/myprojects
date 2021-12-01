@@ -1,0 +1,50 @@
+<div *ngIf="isUserLogedInTrue"  #titleDiv class="backgroundGray nomargin mobilebackgroundGray myInsertRemoveTrigger">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 customerdetail">
+                    <div class="avatar-upload">
+                        <div class="avatar-edit">
+                        </div>
+                        <div class="avatar-preview" >
+                            <div id="imagePreview" class="profileimage">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer-name">
+                        Hello,
+                        <span class="name">
+                            <span id="AccountTitle">{{userDetails.loginName}}</span>
+                        </span>
+                    </div>
+                    <div class="date-time">
+                        Last Login Date : {{userDetails.loginDate}}
+                    </div>
+                    <div class="date-time">
+                        Last Password Change : {{userDetails.passwordUpdateDate}} 
+                    </div>
+                    <a href="" class="paddingzero"> <span>Change Password</span></a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 orbitdetail">
+                    <!-- <span [ngSwitch]="this.userDetails.userOrbits.customerTier">
+                       <span *ngSwitchCase="01"><img class="orbit-6" src="../assets/img/orbit-3.png"></span>
+                       <span *ngSwitchCase="02"><img class="orbit-6" src="../assets/img/orbit-6.png"></span>
+                       <span *ngSwitchCase="03"><img class="orbit-6" src="../assets/img/orbit-9.png"></span>
+                       <span *ngSwitchDefault></span>
+                    </span> -->
+                    <img class="orbit-6" src="../assets/img/orbit-6.png">
+                    <label class="limitcategory">Limit Category: <span>{{userDetails.category}}</span></label>
+                    <a href=""><img class="refreshicon" src="../assets/img/refresh.png"></a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 availablelimit ">
+                    <label>AVAILABLE LIMIT</label><br>
+                    <label>{{this.userDetails.amount}}</label>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 totallimit ">
+                    <label>TOTAL LIMIT</label><br>
+                    <label>{{this.userDetails.totalTransactions}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

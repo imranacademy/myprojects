@@ -1,0 +1,60 @@
+<div class="container centeralign term-background" id="panel" >
+    <div class="">
+        <h2>Registration for <span>Bank Alfalah</span> Internet Banking</h2>
+        <div class="underline"></div>
+        <div class="">Registering for Bank Alfalah Internet Banking is a simple, one-step procedure.<br>
+            <span>Enter the details required below, and click 'Submit' to bank online now!.</span> </div>
+        <br>
+        <ul class="progressbar">
+            <li class="active"></li>
+            <li class="active"></li>
+            <li></li>
+        </ul>
+        <p>So close! You are just one step away from completing the process and <span> availing </span> many exciting features</p>
+        <br>
+        <br>
+        <div class="termcontent">
+            <div class="dvopt">
+                <div class="row dvtermcontent">
+                    <div class="cntr">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 RButtons radiobutton34">
+                            <!-- <input type="radio" id="f-option"  name="options"  [(ngModel)]="options"  [value]="true" [checked]="options"> -->
+                            <input name="options"  id="f-option" #accountno  type="radio" 
+                            [(ngModel)]="one" value="1" (change)="radioButtonChanged(accountno)"/>
+                            <label for="f-option">Account Holders</label>
+                            <div class="check"></div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4  RButtons radiobutton18">
+                            <input type="radio" id="s-option" name="options" ngModel #creditCard  value="2" (change)="radioButtonChanged(creditCard)">
+                            <label for="s-option">Credit Card Customers</label>
+                            <div class="check">
+                                <div class="inside"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4  RButtons radiobutton18">
+                            <input type="radio" id="m-option" name="options" ngModel #debitcard  value="3" (change)="radioButtonChanged(debitcard)">
+                            <label for="m-option">Debit Card Customers</label>
+                            <div class="check">
+                                <div class="inside"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+          
+            <div *ngIf="show">
+                <app-accountholders></app-accountholders>
+            </div>
+            <div *ngIf="show1">
+                <app-creditcardcustomers></app-creditcardcustomers>
+            </div>
+            <div *ngIf="show2">
+                <app-debitcardcustomers></app-debitcardcustomers>
+            </div>
+        </div>
+        <br>
+        
+    </div>
+</div>
+<section>
