@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { IdentityService } from './identity/identity.service';
 import { PostsService } from './posts.service';
 
 @Component({
@@ -10,16 +12,18 @@ import { PostsService } from './posts.service';
 })
 export class AppComponent {
   title = 'alfaweb';
-  constructor(private todo: PostsService) {}
+  constructor(private identityService: IdentityService,private router:Router) {}
 
   ngOnInit() {
-    //this.todo.gettodos().subscribe(x=>console.log(x))
-    /** spinner starts on init */
-   // this.spinner.show();
-
-    // setTimeout(() => {
-      /** spinner ends after 5 seconds */
-     // this.spinner.hide();
-    // }, 5000);
+   this.loadCurrentUser();
+  }
+  loadCurrentUser() {
+    const token = localStorage.getItem('token');
+    this.identityService.loadCurrentUser(token).subscribe(() => {
+      console.log('loaded user');
+    }, error => {
+      this.router.navigate(['/identity/login'])
+      console.log(error);
+    });
   }
 }

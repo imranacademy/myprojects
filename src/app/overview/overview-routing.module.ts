@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { AccountstatementComponent } from './accountstatement/accountstatement.component';
 import { CardsComponent } from './cards/cards.component';
+import { CardsummaryComponent } from './cardsummary/cardsummary.component';
 import { ChangepackageComponent } from './myprofile/changepackage/changepackage.component';
 import { AddaccountComponent } from './myprofile/manageaccount/addaccount/addaccount.component';
 import { ManageaccountComponent } from './myprofile/manageaccount/manageaccount.component';
@@ -16,6 +17,7 @@ import { UseractivityComponent } from './myprofile/usermanagement/useractivity/u
 import { UsermanagementComponent } from './myprofile/usermanagement/usermanagement.component';
 import { OrbitsComponent } from './orbits/orbits.component';
 import { OverviewTabsComponent } from './overview-tabs.component';
+import { OverviewResolver } from './route-resolver/overview.resolver';
 
 
 const routes: Routes = [
@@ -25,6 +27,9 @@ const routes: Routes = [
     {path:'',redirectTo:'account',pathMatch:'full'},
     {path:'accountstatement',component:AccountstatementComponent},
     {path:'cards',component:CardsComponent},
+    {path:'cardsummary/:cardnumber',
+    component:CardsummaryComponent,
+     resolve:{carddata:OverviewResolver}},
     {path:'orbits',component:OrbitsComponent},
     {path:'myprofile',component:MyprofileComponent,
      children:[

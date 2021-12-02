@@ -21,6 +21,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { AccountstatementComponent } from './accountstatement/accountstatement.component';
 import { ReactiveFormsModule,FormsModule } from "@angular/forms";
 import { OtacComponent } from './myprofile/otac/otac.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { CardsummaryComponent } from './cardsummary/cardsummary.component';
+import { OverviewResolver } from './route-resolver/overview.resolver';
 
 
 
@@ -42,6 +45,7 @@ import { OtacComponent } from './myprofile/otac/otac.component';
     ChangepasswordComponent,
     AccountstatementComponent,
     OtacComponent,
+    CardsummaryComponent,
   ],
   imports: [
     CommonModule,
@@ -49,7 +53,9 @@ import { OtacComponent } from './myprofile/otac/otac.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    NgxPaginationModule,
     SharedModule
-  ]
+  ],
+  providers:[OverviewResolver]
 })
 export class OverviewModule { }

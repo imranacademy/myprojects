@@ -63,11 +63,22 @@ export class OverviewService {
   ChangePackage(body){
     return  this.http.post(this.baseUrl +"ChangePackage/ChangePackage",body)
   }
+
+  setPackage(body){
+    return  this.http.post(this.baseUrl +"ChangePackage/SetPackage",body)
+  }
   GenerateOtac(){
   return this.http.get(this.baseUrl +"ChangePackage/GenerateOtac");
   }
 
   GetCreditCardsByCnic(obj){
     return this.http.post(this.baseUrl +"UserDetail/GetCreditCardsByCnic",obj)
+    }
+
+  //  http://172.24.24.224:4001/api/UserDetail/CreditCardSummary
+
+    
+    CreditCardSummary(obj){
+    return this.http.get(this.baseUrl +`UserDetail/CreditCardSummary?creditcard=${obj}`)
     }
 }

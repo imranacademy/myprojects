@@ -2999,7 +2999,7 @@ a.optionscolor:hover {
 }
 
 .qrimg {
-    width: 50%;
+    width: 30%;
 }
 
 .alfamobile {
@@ -4742,7 +4742,7 @@ background: #eee;*/
 
     .tabbed-content .tabs li {
         display: inline-block;
-        width: 272px;
+        width: 366px;
     }
 
     .tabbed-content .tabs li a {

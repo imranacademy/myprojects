@@ -11,7 +11,10 @@ import { CustomerRegistrationData } from 'src/app/shared/models/IUser';
 export class LoginactivityComponent implements OnInit {
 
   userDetails:CustomerRegistrationData;
-  loginActivity$ :Observable<any[]>;
+  loginActivity:any;
+  totalLength:any;
+  page:number = 1;
+
   constructor(private http:UsermanagementService) { }
 
   ngOnInit() {
@@ -22,8 +25,11 @@ export class LoginactivityComponent implements OnInit {
    // console.log(this.userDetails)
     form.value.regNumber = this.userDetails.debitCard;
   //console.log(form.value)
-  this.http.loginActivity(form.value).subscribe(x=>console.log(x))
-  this.loginActivity$ =  this.http.loginActivity(form.value);
+  this.http.loginActivity(form.value).subscribe(result=>{
+    this.loginActivity = result
+    this.totalLength = result.length;
+  })
+  //this.loginActivity$ =  this.http.loginActivity(form.value);
   }
 
 }

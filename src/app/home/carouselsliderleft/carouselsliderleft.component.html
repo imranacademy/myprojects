@@ -1,4 +1,4 @@
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 whitebackground firstsliderleft slidermargin1"  >
+<!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 whitebackground firstsliderleft slidermargin1"  >
     <section id="variable" style=" margin: 0 0 0 0;   width: 100%;" class="variable slider">
         <div>
             <img class="sliderimageleft" src="assets/img/banner-1.png">
@@ -16,4 +16,29 @@
             <img class="sliderimageleft" src="assets/img/banner-1.png">
         </div>
     </section>
-</div>
+</div> -->
+
+<div class="row banner2">
+    <div class="container">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 whitebackground firstsliderleft slidermargin1">
+       <section style=" margin: 0 0 0 0;   width: 100%;" class="variable slider">
+  
+          <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" >
+            <div ngxSlickItem  *ngFor="let slide of slides" >
+              <img class="sliderimageleft" src={{slide.images}} >
+            </div>
+          </ngx-slick-carousel>  
+       </section>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 whitebackground firstsliderright slidermargin2" style="padding: 0 0 0 0;">
+        <section style=" margin: 0 0 0 0;   width: 100%;" >
+         
+           <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig2" >
+             <div ngxSlickItem *ngFor="let slide of slides2">
+               <img class="sliderimageright" src={{slide.images}} >
+             </div>
+           </ngx-slick-carousel>  
+        </section>
+       </div>
+    </div>
+  </div>

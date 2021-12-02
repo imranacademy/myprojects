@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IdentityService } from 'src/app/identity/identity.service';
+import { IUser } from 'src/app/shared/models/IUser';
 
 @Component({
   selector: 'main-header',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainHeaderComponent implements OnInit {
 
-  constructor() { }
+  isUserLogedInTrue: boolean;
+  currentUser$: Observable<IUser>;
+  
+  constructor(private identityService: IdentityService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.currentUser$ = this.identityService.currentUser$;
   }
 
+
+  logout(){
+    this.identityService.logOut();
+ }
 }
+

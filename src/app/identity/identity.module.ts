@@ -11,6 +11,9 @@ import { DebitcardcustomersComponent } from './register/debitcardcustomers/debit
 import { HttpClientModule } from "@angular/common/http";
 import { SharedModule } from '../shared/shared.module';
 import {Ng2TelInputModule} from 'ng2-tel-input';
+import { SetpasswordComponent } from './setpassword/setpassword.component';
+import { SetpackageComponent } from './setpackage/setpackage.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import {Ng2TelInputModule} from 'ng2-tel-input';
     AccountholdersComponent,
     CreditcardcustomersComponent,
     DebitcardcustomersComponent,
-    TermsconditionsComponent
+    TermsconditionsComponent,
+    SetpasswordComponent,
+    SetpackageComponent
   ],
   imports: [
     CommonModule,

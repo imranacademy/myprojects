@@ -14,7 +14,6 @@ export class LoaderInterceptor implements HttpInterceptor {
         }
    
       return next.handle(req).pipe(
-          delay(500),
         finalize(() => {
           this.busyService.idle();
         })

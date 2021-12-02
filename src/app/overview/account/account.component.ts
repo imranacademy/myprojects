@@ -13,7 +13,7 @@ export class AccountComponent implements OnInit {
 
   userDetails:CustomerRegistrationData;
   userAccounts: any[];
-
+  error:any;
 
   constructor(private overviewService:OverviewService) { }
 
@@ -22,6 +22,9 @@ export class AccountComponent implements OnInit {
 
     this.overviewService.getuseraccountsbalances( this.userDetails.loginName).subscribe((response)=>{
     this.userAccounts = response["data"]
+    },
+    (error:Response)=>{
+    this.error = error["error"]["res"]["responseDescription"]
     });
   }
 

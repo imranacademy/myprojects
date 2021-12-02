@@ -11,7 +11,7 @@ import { OverviewService } from '../services/overview.service';
 })
 export class CardsComponent implements OnInit {
   userDetails:CustomerRegistrationData;
-  userCards: Observable<any[]>;
+  userCards:any[];
   http$: Observable<any[]>;
   data:string;
    msg: string;
@@ -23,9 +23,14 @@ export class CardsComponent implements OnInit {
       "creditcard": "",
       "cnic": '4220109469949'
     }
-  this.userCards =  this.overviewService.GetCreditCardsByCnic(obj).pipe(map(x=>{
-  return x["data"]["userData"]
-  }));
+  // this.userCards =  this.overviewService.GetCreditCardsByCnic(obj).pipe(map(x=>{
+  // return x["data"]["userData"]
+  // }));
+
+  this.overviewService.GetCreditCardsByCnic(obj).subscribe(x=>{
+    this.userCards = x["data"]["userData"]
+    // localStorage.setItem('cardsummary',JSON.stringify(this.userCards));
+  });
  // this.overviewService.getuserwallet("faizat").subscribe(x=>console.log(x))
 
 

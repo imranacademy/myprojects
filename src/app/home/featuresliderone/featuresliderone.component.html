@@ -1,4 +1,4 @@
-<div class="backgroundGray displaynone">
+<!-- <div class="backgroundGray displaynone">
 
     <div class="container">
 
@@ -88,6 +88,41 @@
 
             </div>
         </div>
+
+    </div>
+</div> -->
+<div class="backgroundGray displaynone">
+    <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="featureheading">Our Featured Services</h3>
+                        <div class="featureline"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <section class="regular slider">  
+                            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" >
+                            <div ngxSlickItem *ngFor="let slide of slides">                 
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxwhite">         
+                                        <h4 class="featureredheading"><a href="#" style="color: #d9291c;"> {{slide.heading}}</a>
+                                        </h4>
+                                        <div class="sliderline"></div>
+                                        <p class="SliderP">{{slide.subHeading}}</p>
+                                        <a href="https://www.bankalfalah.com/personal-banking/cards/privileges-discounts/discounts" 
+                                        style="padding:0;">
+                                            <img class="margin-34" src={{slide.img1}}>
+                                        </a>
+                                        <img class="line"  src={{slide.img2}}>
+                                    </div>
+                             </div>   
+                            </ngx-slick-carousel>                         
+                        </section>
+                    </div>
+                </div>
+
+         
+    
 
     </div>
 </div>
