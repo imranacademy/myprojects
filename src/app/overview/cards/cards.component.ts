@@ -12,9 +12,10 @@ import { OverviewService } from '../services/overview.service';
 export class CardsComponent implements OnInit {
   userDetails:CustomerRegistrationData;
   userCards:any[];
-  http$: Observable<any[]>;
   data:string;
    msg: string;
+   totalLength:any;
+   page:number = 1;
   constructor(private overviewService:OverviewService) { }
 
   ngOnInit() {
@@ -29,6 +30,8 @@ export class CardsComponent implements OnInit {
 
   this.overviewService.GetCreditCardsByCnic(obj).subscribe(x=>{
     this.userCards = x["data"]["userData"]
+    this.totalLength = this.userCards.length
+    console.log(this.userCards)
     // localStorage.setItem('cardsummary',JSON.stringify(this.userCards));
   });
  // this.overviewService.getuserwallet("faizat").subscribe(x=>console.log(x))

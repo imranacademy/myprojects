@@ -18,6 +18,8 @@ import { UsermanagementComponent } from './myprofile/usermanagement/usermanageme
 import { OrbitsComponent } from './orbits/orbits.component';
 import { OverviewTabsComponent } from './overview-tabs.component';
 import { OverviewResolver } from './route-resolver/overview.resolver';
+import { WalletComponent } from './wallet/wallet.component';
+import { WalletsummaryComponent } from './walletsummary/walletsummary.component';
 
 
 const routes: Routes = [
@@ -27,9 +29,9 @@ const routes: Routes = [
     {path:'',redirectTo:'account',pathMatch:'full'},
     {path:'accountstatement',component:AccountstatementComponent},
     {path:'cards',component:CardsComponent},
-    {path:'cardsummary/:cardnumber',
-    component:CardsummaryComponent,
-     resolve:{carddata:OverviewResolver}},
+    {path:'cardsummary/:cardnumber',component:CardsummaryComponent},
+    {path:'wallet',component:WalletComponent},
+    {path:'walletsummary',component:WalletsummaryComponent},
     {path:'orbits',component:OrbitsComponent},
     {path:'myprofile',component:MyprofileComponent,
      children:[

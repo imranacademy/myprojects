@@ -93,6 +93,8 @@
 </div> -->
 <div class="backgroundGray displaynone">
     <div class="container">
+        <div class="aos-item" data-aos="fade-down">
+            <div class="aos-item__inner">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <h3 class="featureheading">Our Featured Services</h3>
@@ -101,9 +103,12 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <section class="regular slider">  
+                        <section class="regular slider"> 
+               
                             <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" >
-                            <div ngxSlickItem *ngFor="let slide of slides">                 
+                            <div ngxSlickItem *ngFor="let slide of slides">
+                                <div class="aos-item" data-aos="zoom-out-down">   
+                                    <div class="aos-item__inner">            
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxwhite">         
                                         <h4 class="featureredheading"><a href="#" style="color: #d9291c;"> {{slide.heading}}</a>
                                         </h4>
@@ -115,14 +120,16 @@
                                         </a>
                                         <img class="line"  src={{slide.img2}}>
                                     </div>
+                                </div>  
+                                </div> 
                              </div>   
                             </ngx-slick-carousel>                         
                         </section>
                     </div>
                 </div>
 
-         
-    
+               </div>
+    </div>
 
     </div>
 </div>

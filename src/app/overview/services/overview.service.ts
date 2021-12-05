@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ICardSummary } from 'src/app/shared/models/ICardSummary';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -78,7 +79,21 @@ export class OverviewService {
   //  http://172.24.24.224:4001/api/UserDetail/CreditCardSummary
 
     
-    CreditCardSummary(obj){
-    return this.http.get(this.baseUrl +`UserDetail/CreditCardSummary?creditcard=${obj}`)
+    CreditCardSummary(obj):Observable<ICardSummary>{
+    return this.http.get<ICardSummary>(this.baseUrl +`UserDetail/CreditCardSummary?creditcard=${obj}`)
+    }
+
+ //   http://172.24.24.224:4001/api/UserDetail/GetWalletAccountsBalance
+
+    GetWalletAccountsBalance(obj:any){
+      return this.http.post(this.baseUrl +"UserDetail/GetWalletAccountsBalance",obj)
+    }
+    GetWalletStatements(obj:any){
+      return this.http.post(this.baseUrl +"UserDetail/GetWalletStatements",obj)
+    }
+
+   // http://172.24.24.224:4001/api/UserDetail/GetOrbits
+    GetOrbits(obj:any){
+      return this.http.post(this.baseUrl +"UserDetail/GetOrbits",obj)
     }
 }

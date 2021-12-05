@@ -14,6 +14,8 @@ export class AccountComponent implements OnInit {
   userDetails:CustomerRegistrationData;
   userAccounts: any[];
   error:any;
+  totalLength:any;
+  page:number = 1;
 
   constructor(private overviewService:OverviewService) { }
 
@@ -22,6 +24,8 @@ export class AccountComponent implements OnInit {
 
     this.overviewService.getuseraccountsbalances( this.userDetails.loginName).subscribe((response)=>{
     this.userAccounts = response["data"]
+    this.totalLength = response.length
+    console.log(this.userAccounts)
     },
     (error:Response)=>{
     this.error = error["error"]["res"]["responseDescription"]

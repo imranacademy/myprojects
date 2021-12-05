@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerRegistrationData } from 'src/app/shared/models/IUser';
 import { IdentityService } from '../identity.service';
@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
   loginForm:FormGroup;
   returnUrl: string;
   userDetails:CustomerRegistrationData;
+  descriptionResult:any;
+
   constructor(private fb:FormBuilder,
     private idntityService: IdentityService,private router: Router, private activatedRoute: ActivatedRoute) { }
 
@@ -24,14 +26,23 @@ export class LoginComponent implements OnInit {
 
   createLoginForm(){
     this.loginForm=this.fb.group({
-      uname:[''],
-      password:[''],
+      uname:['',Validators.required],
+      password:['',Validators.required],
     });
     
   }
 
+  get username(){
+    return this.loginForm.controls['uname']
+  }
+
+  get password(){
+    return this.loginForm.controls['password']
+  }
+
   onSubmit(){
     this.idntityService.login(this.loginForm.value).subscribe((response) => {
+     if(response.data.responseCode === "00"){
       this.userDetails = JSON.parse(localStorage.getItem('userDetails'))[0];
       if(this.userDetails.isFirstLogin === true){
         this.router.navigate(['/identity/setpassword']);
@@ -43,6 +54,11 @@ export class LoginComponent implements OnInit {
       else{
         this.router.navigateByUrl(this.returnUrl);
       }
+     }
+     else{
+       this.descriptionResult = response.data.responseDescription;
+     }
+    
     }, error => {
       console.log(error);
     });

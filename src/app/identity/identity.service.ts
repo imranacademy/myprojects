@@ -15,39 +15,40 @@ export class IdentityService {
   currentUser$ = this.currentUserSource.asObservable();
   
   constructor(private http:HttpClient,private router: Router) { }
-  loadCurrentUser(token: string) {
-    if (token === null) {
+
+  loadCurrentUser(user: IUser) {
+    if (user === null) {
       this.currentUserSource.next(null);
       return of(null);
     }
 
-    let headers = new HttpHeaders();
-    headers = headers.set('Authorization', `Bearer ${token}`);
-
-    return this.http.get(this.baseUrl + 'account', {headers}).pipe(
-      map((user: IUser) => {
         if (user) {
-          localStorage.setItem('token', user.data.token);
-          this.currentUserSource.next(user);
+         return this.currentUserSource.next(user);
         }
-      })
-    );
+
   }
 
-  login(values: any) {
+  login(values: any){
     const username = values.uname;
     const password = values.password;
     console.log(username);
     console.log(password);
-    return this.http.get<IUser>(`${this.baseUrl}login/UserValidate?username=${username}&password=${password}`).pipe(
+    return this.http.get<IUser>(`${this.baseUrl}login/UserValidate?username=${username}&password=${password}`)
+    .pipe(
       map((user: IUser) => {
-        if (user) {
+
+        if (user.data.responseCode === "00") {
           localStorage.setItem('userDetails', JSON.stringify( user.data.data[0].customerRegistrationData));
           localStorage.setItem('userMenu', JSON.stringify(user.data.data[0].userMenu));
-          localStorage.setItem('token', user.data.token);
+          localStorage.setItem('token', user.data.token); 
+          localStorage.setItem('user', JSON.stringify(user)); 
           this.currentUserSource.next(user);
         }
+
+          return user
+
       })
+      
     );
   }
   isUserLoggedIn() {
@@ -158,6 +159,7 @@ export class IdentityService {
       localStorage.removeItem('userMenu');
       localStorage.removeItem('userDetails');
       localStorage.removeItem("token");
+      localStorage.removeItem('user');
       this.currentUserSource.next(null);
       this.router.navigateByUrl('/');
     }

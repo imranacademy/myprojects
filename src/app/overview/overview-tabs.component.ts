@@ -13,7 +13,6 @@ export class OverviewTabsComponent implements OnInit {
   constructor(private identityservice:IdentityService) { }
 
   ngOnInit(): void {
-    this.identityservice.currentUser$.subscribe(x=>console.log(x))
   }
 
 }

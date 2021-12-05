@@ -24,6 +24,8 @@ import { OtacComponent } from './myprofile/otac/otac.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { CardsummaryComponent } from './cardsummary/cardsummary.component';
 import { OverviewResolver } from './route-resolver/overview.resolver';
+import { WalletComponent } from './wallet/wallet.component';
+import { WalletsummaryComponent } from './walletsummary/walletsummary.component';
 
 
 
@@ -46,6 +48,8 @@ import { OverviewResolver } from './route-resolver/overview.resolver';
     AccountstatementComponent,
     OtacComponent,
     CardsummaryComponent,
+    WalletComponent,
+    WalletsummaryComponent,
   ],
   imports: [
     CommonModule,

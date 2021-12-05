@@ -1,0 +1,210 @@
+<div class="backgroundGray Cardpaybackground landscapewhite redlinemargin">
+    <div class="container">
+        <button id="" class="feedback-button feedbackcolor" onclick="toggle_visibility()">Feedback</button>
+        <p class="popupmargin">
+            <a href="../Account/AccountOverview.html" style="color: #b4b4b4;">Wallet</a> 
+            <span>>></span>
+            <a href="../Account/Accountstatement.html" style="color: #b4b4b4;">Wallet Statement</a>
+        </p>
+        <form #form="ngForm" (ngSubmit)="submit(form)">     
+        <div class="row overviewrows">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!-- <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12"> -->
+                   
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mbtextboxspace">
+                        <div class="form-item">
+                            <p class="formLabel">From</p>
+                            <input type="date" name="fromDate" ngModel class="form-style" id="date-1" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mbtextboxspace">
+                        <div class="form-item">
+                            <p class="formLabel">To</p>
+                            <input type="date" name="toDate" ngModel class="form-style" id="date-2" required="required"/>
+                        </div>
+                    </div>
+          
+                    <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  mbtextboxspace">
+                        &nbsp;
+                    </div> -->
+                    
+                <!-- </div> -->
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 displaynone novector">
+                    <img class="calender" src="../assets/img/vector-img/calendar.png" style="margin:0px !important; height: 70px !important;">
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 textboxmargin mbtextboxspace">
+                        <!-- <input type="submit" class="redbutton generate" id="generate" value="Generate" name=""> -->
+
+                        <button type="submit" class="redbutton generate" id="generate">Generate</button>
+                        <!--   <a href="#" id="generate"> <img class="accountgeneratebutton" src="../assets/img/minigenerate.png"> </a> -->
+                    </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+<div id="tableaccount" class="backgroundGray Cardpaybackground landscapewhite redlinemargin">
+    <div class="container mbpadding">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 accounts">
+            <div class="table-responsive">
+                <table class="generaltable ">
+                    <thead>
+                        <tr>
+                            <td>Product Type</td>
+                            <td>Client Code</td>
+                            <td>MSISDN</td>
+                            <td>Submission Date</td>
+                            <td>Internal Account Number</td>
+                            <td>Account Reference</td>
+                            <td>Account Status</td>
+                            <td>Account Holder ID</td>
+                            <td>Card Reference No.</td>
+                            <td>Wallet ID</td>
+                            <td>Product ID</td>
+                            <td>Product Name</td>
+                            <td>Account Type</td>
+                            <td>Map Level</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Opening Balance</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>20000</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Internal</td>
+                            <td>672545</td>
+                            <td>0333xxxxxx</td>
+                            <td>null</td>
+                            <td>415931774</td>
+                            <td>0000051354055</td>
+                            <td>ACCOUNT_STATUS_ACTIVE</td>
+                            <td>77816328</td>
+                            <td></td>
+                            <td>933303332447026</td>
+                            <td>9333</td>
+                            <td>Alfa Saving</td>
+                            <td>INDIVIDUAL</td>
+                            <td>L1</td>
+                        </tr>
+                        <tr>
+                            <td>Internal</td>
+                            <td>672545</td>
+                            <td>0333xxxxxx</td>
+                            <td>null</td>
+                            <td>415931774</td>
+                            <td>0000051354055</td>
+                            <td>ACCOUNT_STATUS_ACTIVE</td>
+                            <td>77816328</td>
+                            <td></td>
+                            <td>933303332447026</td>
+                            <td>9333</td>
+                            <td>Alfa Saving</td>
+                            <td>INDIVIDUAL</td>
+                            <td>L1</td>
+                        </tr>
+                        <tr>
+                            <td>Internal</td>
+                            <td>672545</td>
+                            <td>0333xxxxxx</td>
+                            <td>null</td>
+                            <td>415931774</td>
+                            <td>0000051354055</td>
+                            <td>ACCOUNT_STATUS_ACTIVE</td>
+                            <td>77816328</td>
+                            <td></td>
+                            <td>933303332447026</td>
+                            <td>9333</td>
+                            <td>Alfa Saving</td>
+                            <td>INDIVIDUAL</td>
+                            <td>L1</td>
+                        </tr>
+                        <tr>
+                            <td>Internal</td>
+                            <td>672545</td>
+                            <td>0333xxxxxx</td>
+                            <td>null</td>
+                            <td>415931774</td>
+                            <td>0000051354055</td>
+                            <td>ACCOUNT_STATUS_ACTIVE</td>
+                            <td>77816328</td>
+                            <td></td>
+                            <td>933303332447026</td>
+                            <td>9333</td>
+                            <td>Alfa Saving</td>
+                            <td>INDIVIDUAL</td>
+                            <td>L1</td>
+                        </tr>
+                        <tr>
+                            <td>Internal</td>
+                            <td>672545</td>
+                            <td>0333xxxxxx</td>
+                            <td>null</td>
+                            <td>415931774</td>
+                            <td>0000051354055</td>
+                            <td>ACCOUNT_STATUS_ACTIVE</td>
+                            <td>77816328</td>
+                            <td></td>
+                            <td>933303332447026</td>
+                            <td>9333</td>
+                            <td>Alfa Saving</td>
+                            <td>INDIVIDUAL</td>
+                            <td>L1</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong> Closing Balance</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong> 20000</strong></td>
+                        </tr>
+                    </tfoot>
+         
+                </table>
+            </div>
+            
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+
+            <button class="accountstatementbuttons"  >Print </button>
+            <button class="accountstatementbuttons" > Download as Excel</button>
+            <button class="accountstatementbuttons"  > Download as PDF</button>
+        </div>
+    </div>
+</div>
+
+
+

@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselsliderleftComponent implements OnInit {
   slides = [
-    {images:"assets/img/banner-9.png"},
     {images:"assets/img/banner-1.png"},
     {images:"assets/img/banner-1.png"},
     {images:"assets/img/banner-1.png"}
   ];
 
   slides2 = [
-    {images:"assets/img/banner-10.png"},
     {images:"assets/img/banner-2.png"},
     {images:"assets/img/banner-2.png"},
     {images:"assets/img/banner-2.png"}

@@ -3,34 +3,34 @@
     <div class="container">
         <button id="" class="feedback-button feedbackcolor" onclick="toggle_visibility()">Feedback</button>
         <!-- <p>{{data}}</p> -->
-        <div *ngIf="!userAccounts" style="margin-top: 30px;">
+        <!-- <div *ngIf="!userAccounts" style="margin-top: 30px;">
             <div class="alert alert-danger">
                 <i class="fa fa-exclamation"></i> {{this.error}}
             </div>
-        </div>
+        </div> -->
         
        
-        <div class="row overviewrows margintop" *ngFor='let useraccount of userAccounts | paginate: { itemsPerPage: 5, 
-            currentPage: page,totalItems:totalLength}'>
+        <div class="row overviewrows margintop" *ngFor='let userwallet of userWallets | paginate: { itemsPerPage: 5, 
+            currentPage: page,totalItems:totalLength}' >
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                 <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
-                    <label>Current Account</label><br>
-                    <label class="overviewdetails">{{useraccount.accountNumber}}</label>
+                    <label>WalletID</label><br>
+                    <label class="overviewdetails">{{userwallet.walletID}}</label>
                 </div>
                 <div class="col-lg-2 col-lg-offset-3 col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1 col-xs-4">
-                    <label><span class="fontsize">{{useraccount.currency}} {{useraccount.balance}}</span></label><br>
-                    <label class="overviewbalance">Balance</label>
+                    <label><span class="fontsize">WalletBalance </span></label><br>
+                    <label class="overviewbalance">{{userwallet.availableAmount}}</label>
                 </div>
                 <div class="col-lg-3 col-lg-offset-2 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-2 col-xs-2 displaynone ">
-                    <a href="ministatement.html"> <button class="statementbuttons"> Mini Statement</button></a>
-                    <a routerLink="/overview/overview-tabs/accountstatement"> <button class="Asbuttons"  > Account Statement</button></a>
+                    <!-- <a href="ministatement.html"> <button class="statementbuttons"> Mini Statement</button></a> -->
+                    <a [routerLink]="['/overview/overview-tabs/walletsummary']" [state]="userwallet"> <button class="Asbuttons"  > Wallet Statement</button></a>
                 </div>
                 <div class=" col-xs-2 largenone novector">
-                    <a href="#"> <img class="showbutton" src="assets/img/mobileArrow.png" style="width: 18px; padding: 14px 0 0 0;"> </a>
+                    <a href="#"> <img class="showbutton" src="../assets/img/mobileArrow.png" style="width: 18px; padding: 14px 0 0 0;"> </a>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " id="buttons" style="display: none">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <!-- <a href="ministatement.html"> <button class="statementbuttons "> Mini Statement</button></a> -->
+                        <a href="ministatement.html"> <button class="statementbuttons "> Mini Statement</button></a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <a href="Accountstatement.html"> <button class="Asbuttons "  > Account Statement</button></a>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <pagination-controls style="color:white" class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
-        <p><img class="plusicon" src="assets/img/plus.png"> Add Another Account? <a style="padding: 0 10px 0 0px;" href="MyProfile/manageaccount.html"><span>Click here!</span></a></p>
+        <p><img class="plusicon" src="../assets/img/plus.png"> Add Another Account? <a style="padding: 0 10px 0 0px;" href="../MyProfile/manageaccount.html"><span>Click here!</span></a></p>
     </div>
 </div>
 <router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ICardSummary } from 'src/app/shared/models/ICardSummary';
 import { OverviewService } from '../services/overview.service';
 
 @Component({
@@ -8,18 +9,21 @@ import { OverviewService } from '../services/overview.service';
   styleUrls: ['./cardsummary.component.css']
 })
 export class CardsummaryComponent implements OnInit {
-  d:any;
+  card:ICardSummary;
   constructor(private route:ActivatedRoute,private overviewService:OverviewService) { 
-    this.route.data.subscribe(data=>{
-     this.d =  data["cardnumber"]
-    })
-    console.log(this.d)
+    // this.route.data.subscribe((data:{cardnumber:ICardSummary})=>{
+    //  this.card =  data.cardnumber
+    // })
+    // console.log(this.card.responseCode)
   }
-
+//this.route.snapshot.data["cardnumber"]
   ngOnInit(): void {
-  //  this.overviewService.CreditCardSummary("5239690014388102").subscribe(x=>console.log(x))
-  //  var value =  JSON.parse(localStorage.getItem('cardsummary'))
-  //  console.log(value);
+   this.overviewService.CreditCardSummary('5239690014388102').subscribe(response=>{
+     this.card = response["data"];
+     console.log(this.card)
+   })
+   //var value =  JSON.parse(localStorage.getItem('cardsummary'))
+  // console.log(value);
   }
 
 }

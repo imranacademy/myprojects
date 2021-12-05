@@ -96,33 +96,40 @@
         </div>
     </div>
 </div> -->
+
 <div class="container">
-    <div class="row margintop12">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h3 class="featureheading">Order Food, Shop Online & Receive Remittance</h3>
-            <div class="bannerline"></div>
-        </div>
-    </div>
-    <div class="row">
-        <section id="dvmall3" class="variable slider">
-            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" >
-                <div ngxSlickItem *ngFor="let slide of slides">  
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                        <div class="product-content product-fourcolumn clearfix">
-                            <div class="product style2 clearfix"  >
-                                <div class="">
-                                    <div class="product-thumb">
-                                        <a href="#" class="">
-                                            <img class="sliderimg" src={{slide.imgSrc}} alt="image">
-                                        </a>
+
+    <div class="aos-item" data-aos="fade-up">
+
+        <div class="aos-item__inner">
+            <div class="row margintop12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="featureheading">Order Food, Shop Online & Receive Remittance</h3>
+                    <div class="bannerline"></div>
+                </div>
+            </div>
+            <div class="row">
+                <section id="dvmall3" class="variable slider">
+                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" >
+                        <div ngxSlickItem *ngFor="let slide of slides">  
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                                <div class="product-content product-fourcolumn clearfix">
+                                    <div class="product style2 clearfix"  >
+                                        <div class="">
+                                            <div class="product-thumb">
+                                                <a href="#" class="">
+                                                    <img class="sliderimg" src={{slide.imgSrc}} alt="image">
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>  </div>
-         
-            </ngx-slick-carousel>
-      
-        </section>
-   </div>
+                            </div>  </div>
+                 
+                    </ngx-slick-carousel>
+              
+                </section>
+           </div>
+    </div>
+    </div>
 </div>
