@@ -38,7 +38,7 @@ export class AccountholdersComponent implements OnInit {
         email:['',[Validators.required,Validators.email]],
         dateofbirth:['',Validators.required],
         carrier:[null,Validators.required],
-        username:['',Validators.required,validateUsernameNotTaken(this.http)],
+        username:['',Validators.required],
         // recaptcha:['',Validators.required],
         captcha:['',[Validators.required,Validators.minLength(6)], this.shouldBeUnique.bind(this)],
         securityquestion:['',Validators.required],
@@ -123,6 +123,14 @@ export class AccountholdersComponent implements OnInit {
   
     submit(){
       console.log(this.form.value)
+       this.http.registerUser(this.form.value).subscribe(res=>{
+         console.log(res)
+       },
+       (error)=>{
+         console.log("There was an error")
+         console.log(error)
+       }
+       )
      this.res$ =  this.http.registerUser(this.form.value).pipe(
       catchError((er) => of(er))
      )

@@ -24,16 +24,20 @@
                                 <p class="formLabel"></p>
                                 <select name="Category" class="form-style" ngModel (change)="onChangePackage($event.target)">
                                       <option value="">Select Account Number</option>
-                                      <option [value]="accountlist.accountNumber" *ngFor="let accountlist of allAcount">{{accountlist.accountNumber}}</option>
+                                      <option [value]="accountlist.accountNumber" 
+                                      *ngFor="let accountlist of allAcount">
+                                      {{accountlist.accountNumber}}
+                                      </option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 " >
-                        <!-- <input type="submit" id="btnproceed" class="redbutton paynow " value="Submit" name=""> -->
+                        <!--   <input type="submit" id="btnproceed" class="redbutton paynow " value="Submit" name=""> -->
                         <button id="btnproceed" class="redbutton paynow ">Submit</button>
-
-                        <!--   <a href="#" id="btnproceed" class="paddingzero"><img class="paynow" src="../assets/img/paymentpaynow.png"></a> -->
+                        <!--   <a href="#" id="btnproceed" class="paddingzero">
+                            <img class="paynow" src="../assets/img/paymentpaynow.png">
+                        </a> -->
                     </div>
                 </form>
                 </div>

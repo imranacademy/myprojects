@@ -21,7 +21,9 @@ export class AppComponent {
   }
   loadCurrentUser() {
     this.identityService.loadCurrentUser(JSON.parse(localStorage.getItem('user')));
-   
+    if(localStorage.getItem('token')!=null){
+       this.router.navigate(['/overview/overview-tabs']);
+    }
     // this.identityService.loadCurrentUser(token).subscribe(() => {
     //   console.log('loaded user');
     // }, error => {

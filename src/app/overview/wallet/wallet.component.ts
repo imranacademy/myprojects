@@ -22,14 +22,14 @@ export class WalletComponent implements OnInit {
       "cnic": this.userDetails.cnic
     }
 
-    this.overviewService.GetWalletAccountsBalance(obj).subscribe((response:any)=>{
-      this.userWallets = response["data"]["data"]
+       this.overviewService.GetWalletAccountsBalance(obj).subscribe((response:any)=>{
+       this.userWallets = response["data"]["data"]
       //console.log(this.userWallets)
-      this.totalLength = response.length
+       this.totalLength = response.length
       },
       (error:Response)=>{
         console.log(error)
-      this.error = error
+        this.error = error
       });
   }
 

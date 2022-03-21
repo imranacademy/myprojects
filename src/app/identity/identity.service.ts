@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of, ReplaySubject } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, timeout } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import {IUser} from '../shared/models/IUser';
 
@@ -44,9 +44,7 @@ export class IdentityService {
           localStorage.setItem('user', JSON.stringify(user)); 
           this.currentUserSource.next(user);
         }
-
           return user
-
       })
       
     );
@@ -88,6 +86,7 @@ export class IdentityService {
      
       return this.http.post(`${this.baseUrl}Registration/AccountRegistration`,obj)
       .pipe(
+        timeout(1000),
         map(x=>{ return x['regCode']})
       );
     }
